@@ -5,13 +5,13 @@
 //  Created by leogoba on 05.11.2022.
 //
 
-struct ProductRecall {
+struct ProductRecall: Decodable {
     let meta: GeneralСharacteristics?
     let results: [GeneralResults]?
     
 }
 
-struct GeneralСharacteristics {
+struct GeneralСharacteristics: Decodable {
     let disclaimer: String?
     let terms: String?
     let license: String?
@@ -19,13 +19,13 @@ struct GeneralСharacteristics {
     let results: NumericalCharacteristics?
 }
 
-struct NumericalCharacteristics {
+struct NumericalCharacteristics: Decodable {
     let skip: Int?
     let limit: Int?
     let total: Int?
 }
 
-struct GeneralResults {
+struct GeneralResults: Decodable {
     let country: String?
     let city: String?
     let address_1: String?

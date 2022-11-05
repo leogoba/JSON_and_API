@@ -14,6 +14,7 @@
 		5260E93C2916A93D00C45461 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5260E93B2916A93D00C45461 /* Assets.xcassets */; };
 		5260E93F2916A93D00C45461 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5260E93D2916A93D00C45461 /* LaunchScreen.storyboard */; };
 		5260E9472916B0F700C45461 /* ProductRecall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5260E9462916B0F700C45461 /* ProductRecall.swift */; };
+		5260E9492916B55E00C45461 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5260E9482916B55E00C45461 /* DataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		5260E93E2916A93D00C45461 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5260E9402916A93D00C45461 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5260E9462916B0F700C45461 /* ProductRecall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRecall.swift; sourceTree = "<group>"; };
+		5260E9482916B55E00C45461 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +60,57 @@
 		5260E9312916A93C00C45461 /* JSON_and_API */ = {
 			isa = PBXGroup;
 			children = (
-				5260E9322916A93C00C45461 /* AppDelegate.swift */,
-				5260E9342916A93C00C45461 /* SceneDelegate.swift */,
-				5260E9362916A93C00C45461 /* ViewController.swift */,
-				5260E9382916A93C00C45461 /* Main.storyboard */,
+				5260E94D2916C55400C45461 /* ViewControllers */,
+				5260E94E2916C56200C45461 /* Storyboards */,
+				5260E94C2916C52A00C45461 /* App */,
+				5260E94B2916C4F500C45461 /* Services */,
+				5260E94A2916C4EB00C45461 /* Models */,
 				5260E93B2916A93D00C45461 /* Assets.xcassets */,
-				5260E93D2916A93D00C45461 /* LaunchScreen.storyboard */,
-				5260E9402916A93D00C45461 /* Info.plist */,
-				5260E9462916B0F700C45461 /* ProductRecall.swift */,
 			);
 			path = JSON_and_API;
+			sourceTree = "<group>";
+		};
+		5260E94A2916C4EB00C45461 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5260E9462916B0F700C45461 /* ProductRecall.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5260E94B2916C4F500C45461 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5260E9482916B55E00C45461 /* DataStore.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		5260E94C2916C52A00C45461 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5260E9322916A93C00C45461 /* AppDelegate.swift */,
+				5260E9342916A93C00C45461 /* SceneDelegate.swift */,
+				5260E9402916A93D00C45461 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		5260E94D2916C55400C45461 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5260E9362916A93C00C45461 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5260E94E2916C56200C45461 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				5260E9382916A93C00C45461 /* Main.storyboard */,
+				5260E93D2916A93D00C45461 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +187,7 @@
 				5260E9372916A93C00C45461 /* ViewController.swift in Sources */,
 				5260E9332916A93C00C45461 /* AppDelegate.swift in Sources */,
 				5260E9472916B0F700C45461 /* ProductRecall.swift in Sources */,
+				5260E9492916B55E00C45461 /* DataStore.swift in Sources */,
 				5260E9352916A93C00C45461 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,7 +337,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RT53XMPLTN;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = JSON_and_API/Info.plist;
+				INFOPLIST_FILE = JSON_and_API/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -324,7 +368,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RT53XMPLTN;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = JSON_and_API/Info.plist;
+				INFOPLIST_FILE = JSON_and_API/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
