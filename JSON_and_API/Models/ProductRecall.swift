@@ -6,47 +6,26 @@
 //
 
 struct ProductRecall: Decodable {
-    let meta: GeneralСharacteristics?
-    let results: [GeneralResults]?
+    let meta: GeneralСharacteristics
+    let results: [GeneralResults]
     
 }
 
 struct GeneralСharacteristics: Decodable {
-    let disclaimer: String?
-    let terms: String?
-    let license: String?
-    let last_updated: String?
-    let results: NumericalCharacteristics?
+    let disclaimer: String
+    let terms: String
+    let license: String
+    let last_updated: String
+    //let results: NumericalCharacteristics
 }
 
 struct NumericalCharacteristics: Decodable {
-    let skip: Int?
-    let limit: Int?
-    let total: Int?
+    let skip: Int
+    let limit: Int
+    let total: Int
 }
 
 struct GeneralResults: Decodable {
-    let country: String?
-    let city: String?
-    let address_1: String?
-    let reason_for_recall: String?
-    let address_2: String?
-    let product_quantity: String?
-    let code_info: String?
-    let center_classification_date: String?
-    let distribution_pattern: String?
-    let state: String?
-    let product_description: String?
-    let report_date: String?
-    let classification: String?
-    let recalling_firm: String?
-    let recall_number: String?
-    let initial_firm_notification: String?
-    let product_type: String?
-    let event_id: String?
-    let more_code_info: String?
-    let recall_initiation_date: String?
-    let postal_code: String?
-    let voluntary_mandated: String?
-    let status: String?
+    let country: String
+    let city: String
 }
