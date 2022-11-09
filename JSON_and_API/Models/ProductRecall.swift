@@ -16,7 +16,7 @@ struct GeneralСharacteristics: Decodable {
     let terms: String
     let license: String
     let last_updated: String
-    //let results: NumericalCharacteristics
+    let results: NumericalCharacteristics
 }
 
 struct NumericalCharacteristics: Decodable {
@@ -26,6 +26,30 @@ struct NumericalCharacteristics: Decodable {
 }
 
 struct GeneralResults: Decodable {
-    let country: String
     let city: String
+    let address_1: String
+    let state: String
+}
+
+extension GeneralСharacteristics {
+    
+    var description: String {
+        """
+        Disclaimer: \(disclaimer)
+        Terms: \(terms)
+        License: \(license)
+        Last update: \(last_updated)
+        """
+    }
+}
+
+extension NumericalCharacteristics {
+    
+    var description: String {
+        """
+        Skip: \(skip)
+        Limit: \(limit)
+        Total: \(total)
+        """
+    }
 }

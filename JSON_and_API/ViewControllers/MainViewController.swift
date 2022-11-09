@@ -29,7 +29,7 @@ class MainViewController: UIViewController {
             
             do {
                 let recall = try decoder.decode(ProductRecall.self, from: data)
-                print(recall)
+                //print(recall)
                 self.productRecall = recall
                 //print(self.productRecall!)
             } catch let error {
@@ -40,36 +40,26 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func resultButtonTapped() {
-        performSegue(withIdentifier: "showResults", sender: nil)
+        performSegue(withIdentifier: "results", sender: nil)
         
     }
     
+    @IBAction func metaButtonTapped() {
+        performSegue(withIdentifier: "meta", sender: nil)
+    }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let navigationVCs = segue.destination as? UINavigationController else { return }
-        let navigationVC = navigationVCs.viewControllers
-        navigationVC.forEach {
-            if let downVC = $0 as? DownViewController {
-                downVC.result = productRecall.results
-            }
-        }
         
+        if segue.identifier == "results" {
+            guard let navigationVCs = segue.destination as? UINavigationController else { return }
+            let navigationVC = navigationVCs.topViewController
+            guard let resultVC = navigationVC as? ResultsTableViewController else { return }
+            resultVC.results = productRecall.results
+            
+        } else if segue.identifier == "meta" {
+            guard let metaVC = segue.destination as? MetaViewController else { return }
+            metaVC.meta = productRecall.meta
+        }
     }
 }
-
-
-//override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard let tabBarController = segue.destination as? UITabBarController else { return }
-//        guard let viewControllers = tabBarController.viewControllers else { return }
-//
-//        viewControllers.forEach {
-//            if let welcomeVC = $0 as? WelcomeViewController {
-//                welcomeVC.user = userData
-//            } else if let navigationVC = $0 as? UINavigationController {
-//                let userInfoVC = navigationVC.topViewController
-//                guard let userInfoVC = userInfoVC as? UserDataViewController else {
-//                    return
-//                }
-//                userInfoVC.user = userData
-//            }
-//        }
-//    }
