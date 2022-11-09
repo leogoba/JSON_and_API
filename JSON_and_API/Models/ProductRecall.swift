@@ -31,8 +31,8 @@ struct GeneralResults: Decodable {
     let state: String
 }
 
+// MARK: - Extension
 extension GeneralСharacteristics {
-    
     var description: String {
         """
         Disclaimer: \(disclaimer)
@@ -44,7 +44,6 @@ extension GeneralСharacteristics {
 }
 
 extension NumericalCharacteristics {
-    
     var description: String {
         """
         Skip: \(skip)

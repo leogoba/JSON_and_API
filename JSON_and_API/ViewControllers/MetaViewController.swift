@@ -9,22 +9,24 @@ import UIKit
 
 class MetaViewController: UIViewController {
     
-    var meta: GeneralСharacteristics!
-
+    //MARK: - IB Outlets
     @IBOutlet var metaLabel: UILabel!
     
+    //MARK: - Public Properties
+    var meta: GeneralСharacteristics!
+    
+    //MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         metaLabel.text = meta.description
     }
     
-
+    //MARK: - IB Actions
     @IBAction func showResultButtonTapped() {
         performSegue(withIdentifier: "showResults", sender: nil)
     }
     
      //MARK: - Navigation
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let showResultsVC = segue.destination as? ShowResultsViewController else { return }
         showResultsVC.results = meta.results

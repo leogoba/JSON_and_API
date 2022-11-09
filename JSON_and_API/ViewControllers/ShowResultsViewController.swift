@@ -9,13 +9,15 @@ import UIKit
 
 final class ShowResultsViewController: UIViewController {
     
-    var results: NumericalCharacteristics!
-    
+    //MARK: - IB Outlets
     @IBOutlet var resultsLabel: UILabel!
     
+    //MARK: - Public Properties
+    var results: NumericalCharacteristics!
+    
+    //MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         resultsLabel.text = results.description
     }
 }

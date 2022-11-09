@@ -9,18 +9,15 @@ import UIKit
 
 class ResultsTableViewController: UITableViewController {
     
+    //MARK: - Public Properties
     var results: [GeneralResults] = []
     
+    //MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    @IBAction func backButton(_ sender: UIBarButtonItem) {
-        dismiss(animated: true)
-    }
-    
     // MARK: - Table view data source
-    
     override func numberOfSections(in tableView: UITableView) -> Int {
         results.count
     }
@@ -50,5 +47,10 @@ class ResultsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    //MARK: - IB Actions
+    @IBAction func backButton(_ sender: UIBarButtonItem) {
+        dismiss(animated: true)
     }
 }
