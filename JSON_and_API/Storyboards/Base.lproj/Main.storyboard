@@ -41,14 +41,23 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="00Y-Gq-bXK">
+                                <rect key="frame" x="141.5" y="265.5" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="00Y-Gq-bXK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0zI-4S-sc2"/>
+                            <constraint firstItem="00Y-Gq-bXK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4Tb-9T-7P5"/>
                             <constraint firstItem="b6c-xz-ZlN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DTB-TZ-wgx"/>
                             <constraint firstItem="b6c-xz-ZlN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zwy-fq-aai"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicate" destination="00Y-Gq-bXK" id="XxZ-Pw-myg"/>
+                        <outlet property="allButtons" destination="b6c-xz-ZlN" id="421-gc-IqT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

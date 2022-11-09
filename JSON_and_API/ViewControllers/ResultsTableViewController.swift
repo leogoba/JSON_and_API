@@ -15,6 +15,10 @@ class ResultsTableViewController: UITableViewController {
         super.viewDidLoad()
     }
     
+    @IBAction func backButton(_ sender: UIBarButtonItem) {
+        dismiss(animated: true)
+    }
+    
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -40,10 +44,11 @@ class ResultsTableViewController: UITableViewController {
         return cell
     }
     
-    @IBAction func backButton(_ sender: UIBarButtonItem) {
-        dismiss(animated: true)
-    }
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         results[section].city
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

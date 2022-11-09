@@ -11,8 +11,15 @@ class MainViewController: UIViewController {
     
     private var productRecall: ProductRecall!
     
+    @IBOutlet var allButtons: UIStackView!
+    
+    @IBOutlet var activityIndicate: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        allButtons.isHidden = true
+        activityIndicate.startAnimating()
+        activityIndicate.hidesWhenStopped = true
         fetchProductRecall()
     }
     
@@ -29,9 +36,12 @@ class MainViewController: UIViewController {
             
             do {
                 let recall = try decoder.decode(ProductRecall.self, from: data)
-                //print(recall)
+                
+                DispatchQueue.main.async {
+                    self.activityIndicate.stopAnimating()
+                    self.allButtons.isHidden = false
+                }
                 self.productRecall = recall
-                //print(self.productRecall!)
             } catch let error {
                 print(error.localizedDescription)
             }
@@ -47,7 +57,6 @@ class MainViewController: UIViewController {
     @IBAction func metaButtonTapped() {
         performSegue(withIdentifier: "meta", sender: nil)
     }
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
