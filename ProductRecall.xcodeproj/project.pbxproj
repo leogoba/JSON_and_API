@@ -21,7 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5260E92F2916A93C00C45461 /* JSON_and_API.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSON_and_API.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5260E92F2916A93C00C45461 /* ProductRecall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProductRecall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5260E9322916A93C00C45461 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5260E9342916A93C00C45461 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5260E9392916A93C00C45461 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 		5260E9262916A93C00C45461 = {
 			isa = PBXGroup;
 			children = (
-				5260E9312916A93C00C45461 /* JSON_and_API */,
+				5260E9312916A93C00C45461 /* ProductRecall */,
 				5260E9302916A93C00C45461 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,12 +58,12 @@
 		5260E9302916A93C00C45461 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5260E92F2916A93C00C45461 /* JSON_and_API.app */,
+				5260E92F2916A93C00C45461 /* ProductRecall.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5260E9312916A93C00C45461 /* JSON_and_API */ = {
+		5260E9312916A93C00C45461 /* ProductRecall */ = {
 			isa = PBXGroup;
 			children = (
 				5260E94D2916C55400C45461 /* ViewControllers */,
@@ -73,7 +73,7 @@
 				5260E94A2916C4EB00C45461 /* Models */,
 				5260E93B2916A93D00C45461 /* Assets.xcassets */,
 			);
-			path = JSON_and_API;
+			path = ProductRecall;
 			sourceTree = "<group>";
 		};
 		5260E94A2916C4EB00C45461 /* Models */ = {
@@ -125,9 +125,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5260E92E2916A93C00C45461 /* JSON_and_API */ = {
+		5260E92E2916A93C00C45461 /* ProductRecall */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5260E9432916A93D00C45461 /* Build configuration list for PBXNativeTarget "JSON_and_API" */;
+			buildConfigurationList = 5260E9432916A93D00C45461 /* Build configuration list for PBXNativeTarget "ProductRecall" */;
 			buildPhases = (
 				5260E92B2916A93C00C45461 /* Sources */,
 				5260E92C2916A93C00C45461 /* Frameworks */,
@@ -137,9 +137,9 @@
 			);
 			dependencies = (
 			);
-			name = JSON_and_API;
+			name = ProductRecall;
 			productName = JSON_and_API;
-			productReference = 5260E92F2916A93C00C45461 /* JSON_and_API.app */;
+			productReference = 5260E92F2916A93C00C45461 /* ProductRecall.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -157,7 +157,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5260E92A2916A93C00C45461 /* Build configuration list for PBXProject "JSON_and_API" */;
+			buildConfigurationList = 5260E92A2916A93C00C45461 /* Build configuration list for PBXProject "ProductRecall" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -170,7 +170,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5260E92E2916A93C00C45461 /* JSON_and_API */,
+				5260E92E2916A93C00C45461 /* ProductRecall */,
 			);
 		};
 /* End PBXProject section */
@@ -349,7 +349,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RT53XMPLTN;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = JSON_and_API/App/Info.plist;
+				INFOPLIST_FILE = ProductRecall/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -380,7 +380,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RT53XMPLTN;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = JSON_and_API/App/Info.plist;
+				INFOPLIST_FILE = ProductRecall/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -405,7 +405,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5260E92A2916A93C00C45461 /* Build configuration list for PBXProject "JSON_and_API" */ = {
+		5260E92A2916A93C00C45461 /* Build configuration list for PBXProject "ProductRecall" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5260E9412916A93D00C45461 /* Debug */,
@@ -414,7 +414,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5260E9432916A93D00C45461 /* Build configuration list for PBXNativeTarget "JSON_and_API" */ = {
+		5260E9432916A93D00C45461 /* Build configuration list for PBXNativeTarget "ProductRecall" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5260E9442916A93D00C45461 /* Debug */,
