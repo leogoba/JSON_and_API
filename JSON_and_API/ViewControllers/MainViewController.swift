@@ -1,8 +1,8 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  JSON_and_API
 //
-//  Created by leogoba on 05.11.2022.
+//  Created by leogoba on 13.11.2022.
 //
 
 import UIKit
@@ -30,8 +30,7 @@ class MainViewController: UIViewController {
             guard let navigationVCs = segue.destination as? UINavigationController else { return }
             let navigationVC = navigationVCs.topViewController
             guard let resultVC = navigationVC as? ResultsTableViewController else { return }
-            //resultVC.results = productRecall.results
-            resultVC.fetchProductRecall()
+            resultVC.results = productRecall.results
         } else {
             guard let metaVC = segue.destination as? MetaViewController else { return }
             metaVC.meta = productRecall.meta
@@ -52,8 +51,8 @@ extension MainViewController {
     private func fetchProductRecall() {
         NetworkManager.shared.fetch(ProductRecall.self, from: Link.apiURL.rawValue) { [weak self] result in
             switch result {
-            case .success(_):
-                print("Success")
+            case .success(let data):
+                self?.productRecall = data
                 self?.activityIndicate.stopAnimating()
                 self?.allButtons.isHidden = false
             case .failure(_):

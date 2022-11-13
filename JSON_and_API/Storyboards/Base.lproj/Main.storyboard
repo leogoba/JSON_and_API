@@ -25,7 +25,6 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Meta"/>
                                         <connections>
-                                            <action selector="metaButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="YzE-oq-00e"/>
                                             <segue destination="uHh-ok-kv9" kind="show" identifier="meta" id="MAU-S0-IuB"/>
                                         </connections>
                                     </button>
@@ -35,7 +34,6 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Results"/>
                                         <connections>
-                                            <action selector="resultButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="nch-Bz-04k"/>
                                             <segue destination="Sce-BG-5OQ" kind="presentation" identifier="results" modalPresentationStyle="fullScreen" id="ZV2-Kz-X6L"/>
                                         </connections>
                                     </button>
@@ -182,7 +180,7 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="HKf-Ii-2sm"/>
                     </navigationItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jWd-AS-8Gz">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
