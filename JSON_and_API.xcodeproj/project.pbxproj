@@ -74,7 +74,6 @@
 				5260E94B2916C4F500C45461 /* Services */,
 				5260E94A2916C4EB00C45461 /* Models */,
 				5260E93B2916A93D00C45461 /* Assets.xcassets */,
-				5286B71F291BF5F000FB0034 /* NetworkManager.swift */,
 			);
 			path = JSON_and_API;
 			sourceTree = "<group>";
@@ -90,6 +89,7 @@
 		5260E94B2916C4F500C45461 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				5286B71F291BF5F000FB0034 /* NetworkManager.swift */,
 				5260E9482916B55E00C45461 /* DataStore.swift */,
 			);
 			path = Services;

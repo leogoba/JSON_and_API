@@ -30,7 +30,8 @@ class MainViewController: UIViewController {
             guard let navigationVCs = segue.destination as? UINavigationController else { return }
             let navigationVC = navigationVCs.topViewController
             guard let resultVC = navigationVC as? ResultsTableViewController else { return }
-            resultVC.results = productRecall.results
+            //resultVC.results = productRecall.results
+            resultVC.fetchProductRecall()
         } else {
             guard let metaVC = segue.destination as? MetaViewController else { return }
             metaVC.meta = productRecall.meta
@@ -45,30 +46,19 @@ class MainViewController: UIViewController {
     @IBAction func metaButtonTapped() {
         performSegue(withIdentifier: "meta", sender: nil)
     }
-    
-    //MARK: - Private Methods
+}
+
+extension MainViewController {
     private func fetchProductRecall() {
-        guard let url = URL(string: DataSrore.shared.URL) else { return }
-        
-        URLSession.shared.dataTask(with: url) { [weak self] data, responce, error in
-            guard let data = data else {
-                print(error?.localizedDescription ?? "No error description")
-                return
+        NetworkManager.shared.fetch(ProductRecall.self, from: Link.apiURL.rawValue) { [weak self] result in
+            switch result {
+            case .success(_):
+                print("Success")
+                self?.activityIndicate.stopAnimating()
+                self?.allButtons.isHidden = false
+            case .failure(_):
+                print("Error")
             }
-            
-            let decoder = JSONDecoder()
-            
-            do {
-                let recall = try decoder.decode(ProductRecall.self, from: data)
-                
-                DispatchQueue.main.async {
-                    self?.activityIndicate.stopAnimating()
-                    self?.allButtons.isHidden = false
-                }
-                self?.productRecall = recall
-            } catch let error {
-                print(error.localizedDescription)
-            }
-        }.resume()
+        }
     }
 }

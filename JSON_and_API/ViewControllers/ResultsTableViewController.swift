@@ -54,3 +54,28 @@ class ResultsTableViewController: UITableViewController {
         dismiss(animated: true)
     }
 }
+
+// MARK: - Networking
+extension ResultsTableViewController {
+    func fetchProductRecall() {
+        guard let url = URL(string: Link.apiURL.rawValue) else { return }
+        
+        URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
+            guard let data = data else {
+                print(error?.localizedDescription ?? "No error description")
+                return
+            }
+            
+            do {
+                let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
+                self?.results = try decoder.decode([GeneralResults].self, from: data)
+                DispatchQueue.main.async {
+                    self?.tableView.reloadData()
+                }
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        }.resume()
+    }
+}
